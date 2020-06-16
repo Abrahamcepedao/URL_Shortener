@@ -14,7 +14,7 @@ def make_tiny(url):
 	with contextlib.closing(urlopen(request_url)) as response:
 		return response.read().decode('utf-8')
 def main():
-	results = open("shortUrls2.txt", "w+")
+	results = open("shortUrls.txt", "w+")
 	for line in open("longUrls.txt", "r"):
 		line = line.rstrip('\r\n')
 		tinyurl = make_tiny(line)
